@@ -1,0 +1,75 @@
+﻿<UserControl x:Class="Halloween.Pages.Settings"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Halloween.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="700">
+    <Grid>
+        <!--Image Background-->
+        <Grid.Background>
+            <ImageBrush x:Name="BK_Settings" ImageSource="/Ressources/Background/Background_Setting.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+
+        <!--TBL "Prénom"-->
+        <TextBlock Grid.Row="1" Name="TB_Prenom" TextWrapping="Wrap" Text="Prénom :" Margin="20" Style="{StaticResource ResourceKey=Text_style}"/>
+        <!--TB_Pr-->
+        <TextBox Grid.Row="1" BorderBrush="Gray"  Name="TB_Pr" TextWrapping="Wrap" Text="" Width="300" Height="45" FontSize="50" FontFamily="Chiller" VerticalAlignment="Center" HorizontalAlignment="Center" Background="{x:Null}" Foreground="White"/>
+        <!--TBL "Nom"-->
+        <TextBlock Grid.Row="2" Name="TB_Nom" Text="Nom :" Margin="20" Style="{StaticResource ResourceKey=Text_style}"/>
+        <!--TB_Nom-->
+        <TextBox Grid.Row="2" BorderBrush="Gray" Name="TB_Nm" TextWrapping="Wrap" Text="" Width="300" Height="50" FontFamily="Chiller" FontSize="50" VerticalAlignment="Center"  HorizontalAlignment="Center" Background="{x:Null}" Foreground="White"/>
+        <Grid Grid.Row="3">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <!--TextBlock et CheckBox "Sexe"-->
+            <TextBlock Grid.Column="0" Name="TB_Sexe" Text="Sexe :" Margin="20" Style="{StaticResource ResourceKey=Text_style}"/>
+            <CheckBox Name="CB_Femme"  Content="Femme" FontSize="30"   VerticalAlignment="Center" Foreground="White" Grid.ColumnSpan="3" HorizontalAlignment="Right" Margin="0,0,233,0" Width="234" Checked="CB_Femme_Checked"/>
+            <CheckBox Grid.Column="2" Name="CB_Homme"  Content="Homme" FontSize="30"  VerticalAlignment="Center" Foreground="White" Checked="CB_Homme_Checked"  />
+        </Grid>
+        <!--TBL "Personaliser la couleur"-->
+        <TextBlock Grid.Row="4" Name="TB_Couleur" Text="Personaliser la couleur" FontSize="50" HorizontalAlignment="Center" Style="{StaticResource ResourceKey=Text_style}" />
+        <Grid Grid.Row="5">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <!--"BTN_Green"-->
+            <Button Grid.Column="1" Name="BTN_Green" Click="BTN_Green_Click" Background="#aad197" BorderBrush="#90aa86" Style="{StaticResource Buttons}"/>
+            <!--"BTN_Red"-->
+            <Button Grid.Column="3" Name="BTN_Red" Click="BTN_Red_Click" Background="#640d14" BorderBrush="#38040e" Style="{StaticResource Buttons}"/>
+        </Grid>
+        <Grid Grid.Row="6">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <!--"BTN_Save"-->
+                <Button Grid.Row="1" Name="BTN_Save" Content="Save" FontSize="30" Click="BTN_Save_Click" Style="{StaticResource Buttons}"/>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

@@ -1,0 +1,80 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Ressources\Background\Background_Countdown2.jpg" />
+    <None Remove="Ressources\Background\Background_Setting.jpg" />
+    <None Remove="Ressources\Background\Background_Settings2.jpg" />
+    <None Remove="Ressources\Background\Background_Skull.jpg" />
+    <None Remove="Ressources\Background\Banckground_prediction.jpg" />
+    <None Remove="Ressources\Cartes\1.jpg" />
+    <None Remove="Ressources\Cartes\10.jpg" />
+    <None Remove="Ressources\Cartes\2.jpg" />
+    <None Remove="Ressources\Cartes\3.jpg" />
+    <None Remove="Ressources\Cartes\4.jpg" />
+    <None Remove="Ressources\Cartes\5.jpg" />
+    <None Remove="Ressources\Cartes\6.jpg" />
+    <None Remove="Ressources\Cartes\7.jpg" />
+    <None Remove="Ressources\Cartes\8.jpg" />
+    <None Remove="Ressources\Cartes\9.jpg" />
+    <None Remove="Ressources\Game\Background_Game.png" />
+    <None Remove="Ressources\Game\Demon.png" />
+    <None Remove="Ressources\Game\Frank.png" />
+    <None Remove="Ressources\Game\Life.png" />
+    <None Remove="Ressources\Game\Loup_garou.png" />
+    <None Remove="Ressources\Game\Momie.png" />
+    <None Remove="Ressources\Game\SorciereLeft.png" />
+    <None Remove="Ressources\Game\SorciereRight.png" />
+    <None Remove="Ressources\Game\Zombie.png" />
+    <None Remove="Ressources\Police\Gloop.ttf" />
+    <None Remove="Ressources\Police\Halloweins.ttf" />
+    <None Remove="Ressources\Police\I-pixel-u.ttf" />
+    <None Remove="Ressources\Police\Skull-Story.ttf" />
+    <None Remove="Ressources\Police\TangoMacabre.ttf" />
+    <None Remove="Ressources\Voyante\Predictions.txt" />
+    <None Remove="Ressources\Voyante\Spreach_bubble.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Ressources\Background\Background_Countdown2.jpg" />
+    <Resource Include="Ressources\Background\Background_Setting.jpg" />
+    <Resource Include="Ressources\Background\Background_Settings2.jpg" />
+    <Resource Include="Ressources\Background\Background_Skull.jpg" />
+    <Resource Include="Ressources\Background\Banckground_prediction.jpg" />
+    <Resource Include="Ressources\Cartes\1.jpg" />
+    <Resource Include="Ressources\Cartes\2.jpg" />
+    <Resource Include="Ressources\Cartes\3.jpg" />
+    <Resource Include="Ressources\Cartes\4.jpg" />
+    <Resource Include="Ressources\Cartes\5.jpg" />
+    <Resource Include="Ressources\Cartes\6.jpg" />
+    <Resource Include="Ressources\Cartes\7.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Ressources\Cartes\8.jpg" />
+    <Resource Include="Ressources\Cartes\9.jpg" />
+    <Resource Include="Ressources\Cartes\10.jpg" />
+    <Resource Include="Ressources\Game\Background_Game.png" />
+    <Resource Include="Ressources\Game\Demon.png" />
+    <Resource Include="Ressources\Game\Frank.png" />
+    <Resource Include="Ressources\Game\Life.png" />
+    <Resource Include="Ressources\Game\Loup_garou.png" />
+    <Resource Include="Ressources\Game\Momie.png" />
+    <Resource Include="Ressources\Game\SorciereLeft.png" />
+    <Resource Include="Ressources\Game\SorciereRight.png" />
+    <Resource Include="Ressources\Game\Zombie.png" />
+    <Resource Include="Ressources\Police\Gloop.ttf" />
+    <Resource Include="Ressources\Police\Halloweins.ttf" />
+    <Resource Include="Ressources\Police\I-pixel-u.ttf" />
+    <Resource Include="Ressources\Police\Skull-Story.ttf" />
+    <Resource Include="Ressources\Police\TangoMacabre.ttf" />
+    <Resource Include="Ressources\Voyante\Predictions.txt" />
+    <Resource Include="Ressources\Voyante\Spreach_bubble.png" />
+  </ItemGroup>
+
+</Project>

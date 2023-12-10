@@ -1,0 +1,29 @@
+﻿<UserControl x:Class="Halloween.Pages.Game"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Halloween.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="850" d:DesignWidth="700">
+    <Grid>
+        <!--Canvas de notre jeu "SpielCanvas"-->
+        <Canvas Name="SpielCanvas" Focusable="True" KeyDown="OnKeyDown" KeyUp="OnKeyUp">
+            <Canvas.Background>
+                <ImageBrush ImageSource="/Ressources/Game/Background_Game.png"/>
+            </Canvas.Background>
+            <!--Rectangle "Player"-->
+            <Rectangle Name="Player" Height="90"  Width="100" Fill="Yellow" RenderTransformOrigin="0.837,0.791" Canvas.Left="300" Canvas.Top="600"/>
+            <!--Label qui affiche le score-->
+            <Label Name="LB_Score"  Content="Score: 0" FontSize="30" FontWeight="Bold" Foreground="White" Canvas.Left="10" FontFamily="{StaticResource Pixel}"/>
+            <!--Label qui affiche la vie-->
+            <Label Name="LB_Life"  Content="Vie: 100" FontSize="30" FontWeight="Bold" Foreground="White" Canvas.Left="550" FontFamily="{StaticResource Pixel}"/>
+            <!--Label qui affiche le niveau-->
+            <Label Name="LB_Lvl"  Content="Level 1" FontSize="50" FontWeight="Bold" Foreground="White" Canvas.Left="260" FontFamily="{StaticResource Pixel}"/>
+            <!--TextBlock qui affiche le meilleur score-->
+            <TextBlock  Name="TB_MScore"  Text="Best Score: 0" FontSize="30" FontWeight="Bold" Foreground="White" Canvas.Top="50" Canvas.Left="10" FontFamily="{StaticResource Pixel}"/>
+            <TextBlock  Name="TB_Rule" TextWrapping="Wrap" Text="Press Spacebar to shoot      Kept pressing the key Left or Right for begin" 
+                        FontSize="40" FontWeight="Bold" Foreground="White"  Canvas.Top="200" Canvas.Left="60" FontFamily="{StaticResource Pixel}" MaxWidth="600"/>
+        </Canvas>
+    </Grid>
+</UserControl>

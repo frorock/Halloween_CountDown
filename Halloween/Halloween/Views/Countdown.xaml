@@ -1,0 +1,72 @@
+﻿<UserControl x:Class="Halloween.Pages.Countdown"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Halloween.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="500">
+    <Grid>
+        <!--Background-->
+        <Grid.Background>
+            <ImageBrush x:Name="BK_Countdown" ImageSource="/Ressources/Background/Background_Countdown2.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <!--Nbr jours restant-->
+            <RowDefinition Height="3*"/>
+            <!--TB Jours-->
+            <RowDefinition Height="3*"/>
+            <!--TB "Before halloween + Days"-->
+            <RowDefinition Height="6*"/>
+        </Grid.RowDefinitions>
+        <!--Nbr jours restant Red-->
+        <TextBlock Grid.Row="1" Name="TBL_NbrJRed" Text="" FontSize="110" HorizontalAlignment="Center"  VerticalAlignment="Bottom"  Foreground="#800e13" FontFamily="{StaticResource Blood}" TextAlignment="Center" />
+        <!--TB "Before halloween + Days"-->
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--Nbr jours restant Green-->
+            <TextBlock Grid.Row="1" Name="TBL_NbrJGreen" FontSize="75" Foreground="#800e13" FontFamily="{StaticResource gloopFont}" TextAlignment="Center" RenderTransformOrigin="0.875,1.127" Margin="10,0,-10,0" />
+        </Grid>
+        <Grid Grid.Row="2">
+            <Grid.RowDefinitions>
+                <!--TB "Before halloween"-->
+                <RowDefinition Height="*"/>
+                <!--TB "Days"-->
+                <RowDefinition Height="2*"/>
+                <!--TB "Days"-->
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <!--TB "Days" Red-->
+            <TextBlock Grid.Row="1" Name="TBL_DRed"  FontSize="100" HorizontalAlignment="Center" Style="{StaticResource ResourceKey=Text_style}"/>
+            <!--TB "Before halloween" Red-->
+            <TextBlock Grid.Row="2" Name="TBL_BHRed" FontSize="70" HorizontalAlignment="Center"  FontFamily="{StaticResource TangoMacabre}" Foreground="White"/>
+            <!--TB "Days" Green-->
+            <TextBlock Grid.Row="0" Name="TBL_DGreen" Text="" FontSize="80" HorizontalAlignment="Center" VerticalAlignment="Center"  FontFamily="{StaticResource Blood}" Foreground="DarkRed"/>
+            <!--TB "Before halloween" Green-->
+            <TextBlock Grid.Row="3" Name="TBL_BHGreen" Text="" FontSize="120" HorizontalAlignment="Center"  FontFamily="{StaticResource Blood}" Foreground="DarkRed"/>
+            <!--TB User Red-->
+            <TextBlock Grid.Row="3" Name="TBL_UserRed"  FontSize="40" HorizontalAlignment="Center" VerticalAlignment="Bottom" Style="{StaticResource ResourceKey=Text_style}"/>
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--TB User Green-->
+                <TextBlock Grid.Column="1" Name="UserGreen" VerticalAlignment= "Center" FontSize="15" FontFamily="Lucida Handwriting" Text="" FontWeight="Bold" TextAlignment="Center">
+                    <TextBlock.RenderTransform>
+                        <TransformGroup>
+                            <ScaleTransform/>
+                            <SkewTransform/>
+                            <RotateTransform Angle="14.813"/>
+                            <TranslateTransform/>
+                        </TransformGroup>
+                    </TextBlock.RenderTransform>
+                </TextBlock>
+            </Grid>
+        </Grid>
+    </Grid>
+</UserControl>

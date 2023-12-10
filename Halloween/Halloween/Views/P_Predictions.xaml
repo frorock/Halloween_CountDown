@@ -1,0 +1,54 @@
+﻿<UserControl x:Class="Halloween.Pages.P_Predictions"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Halloween.Pages"
+             mc:Ignorable="d" 
+             d:DesignHeight="650" d:DesignWidth="600">
+    <Grid>
+        <!--Background-->
+        <Grid.Background>
+            <ImageBrush Stretch="UniformToFill" ImageSource="/Ressources/Background/Banckground_prediction.jpg"/>
+        </Grid.Background>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="3*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <!--Image de la bulle de discussion-->
+            <Grid.Background>
+                <ImageBrush ImageSource="../Ressources/Voyante/Spreach_bubble.png" Stretch="Fill"/>
+            </Grid.Background>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="15*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <Grid Grid.Column="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="5*"/>
+                    <ColumnDefinition Width="20*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="3*"/>
+                    <RowDefinition Height="6*"/>
+                    <RowDefinition Height="5*"/>
+                </Grid.RowDefinitions>
+                <!--TextBlock qui affiche la prediction-->
+                <TextBlock  Grid.Column="1" Grid.Row="1" Name="TB_Speach"  TextWrapping="Wrap" FontFamily="Viner Hand ITC" FontSize="14"/>
+            </Grid>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="2*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="2*"/>
+            </Grid.ColumnDefinitions>
+            <!--Image de la carte de prédiction-->
+            <Image Grid.Column="1" Name="carte" Source="../Ressources/Cartes/1.jpg"/>
+        </Grid>
+    </Grid>
+</UserControl>

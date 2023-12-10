@@ -1,0 +1,49 @@
+﻿<Window x:Class="Halloween.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Halloween"
+        mc:Ignorable="d"
+        Title="Halloween Iliana" Height="850" Width="700">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3*"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <!--Fond noir de notre barre avec les boutons-->
+            <Grid Grid.RowSpan="3" Background="Black">
+            </Grid>
+            <Grid Grid.Row="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <!--Bouton pour afficher la page predicition-->
+                <Button  Grid.Column="1" Name="BTN_Prediction" Content="Prediction" Click="BTN_Pred_Click" Style="{StaticResource Buttons}"  FontSize="22" />
+                <!--Bouton pour afficher la page home-->
+                <Button Grid.Column="3" Name="BTN_Home" Content="Home" Click="BTN_Home_Click" Style="{StaticResource Buttons}" FontSize="22"/>
+                <!--Bouton pour afficher la page settings-->
+                <Button Grid.Column="5" Name="BTN_Settings" Content="Settings" Click="BTN_Sett_Click" Style="{StaticResource Buttons}" FontSize="22"/>
+                <!--Bouton pour afficher la page game-->
+                <Button Grid.Column="7" Name="BTN_Game" Content="Game" Click="BTN_Game_Click" Style="{StaticResource Buttons}" FontSize="22"/>
+            </Grid>
+        </Grid>
+        <!--Conteneur qui va changer selon la page que l'on shouaite afficher-->
+        <Grid Grid.Row="1" Name="Conteneur">
+        </Grid>
+    </Grid>
+</Window>
